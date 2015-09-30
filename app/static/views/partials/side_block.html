@@ -1,0 +1,25 @@
+<div  class="user-box user-bio clearfix" ng-if="userAuthenticated && currUser">
+    <div class="avatar"><img ng-if="currUser.avatar" alt="" ng-src="{! currUser.avatar !}"></div>
+    <div class="info">
+        <p class="greetings">Hi, <span ng-bind="currUser.username"></span></p>
+        <p class="location"><span ng-bind="currUser.userlocation"></span></p>
+    </div>
+    <div class="icons">
+        <i class="fa fa-file-o"></i>
+        <i class="fa fa-bookmark"></i>
+        <a ng-click="logout()"><i class="fa fa-bolt"></i></a>
+
+    </div>
+</div>
+<div class="friends-activity" ng-if="userAuthenticated">
+    <h4>Friends activity <i class="fa fa-eye"></i></h4>
+    <ul>
+        <li ng-repeat="friend in currUser.friends" class="user-box">
+                <div class="avatar"><img ng-if="friend.avatar" alt="" ng-src="{! friend.avatar !}"></div>
+                <div class="info">
+                    
+                </div>
+        </li>
+    </ul>
+</div>
+<a ng-click="runSomeApi()">run test</a>

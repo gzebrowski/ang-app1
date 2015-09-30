@@ -1,0 +1,21 @@
+<div class="vcenter">
+  <div class="item colapsed-menu-btn">
+    <div class="wrapper">
+      <a class="menu-row js-swich-menu" ng-click="switchFullMenu()"><span class="menu-type"></span> Menu</a>
+    </div>
+  </div>
+  <div class="item logo">
+    <div class="wrapper">
+      <p><span class="txt">Independent Journal</span></p>
+    </div>
+  </div>
+  <div class="item user hide-sm">
+    <div class="wrapper" ng-if="userAuthenticated">
+      <span class="img"><img alt="" ng-src="{! currUser.avatar !}"></span>
+      <span class="name" ng-bind="currUser.username"></span>
+    </div>
+    <div class="wrapper" ng-if="!userAuthenticated">
+      <a ui-sref="main.loginpage">Sign In</a>
+    </div>
+  </div>
+</div>

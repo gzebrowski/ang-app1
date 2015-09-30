@@ -1,0 +1,38 @@
+<a ui-sref="main.loginpage">log in</a> <br />
+<div class="registration-form" ng-class="{show_errors: registerFormShowErrors}">
+<form method="post" class="form-controls" name="registrationform">
+    <get-geolocation ng-if="missingFields.location" assign-to="registration_extra.location" message-share-location="Please share your location" message-thank-you="thank you for sharing location"></get-geolocation>
+    <div class="row" ng-if="missingFields.first_name">
+        <label>First name</label>
+        <div class="ctrl">
+            <input type="text" ng-required="missingFields.first_name == 'required'" error-label="Please enter valid first name" name="first_name" ng-model="registration.first_name" placeholder="First name">
+        </div>
+    </div>
+    <div class="row" ng-if="missingFields.last_name">
+        <label>Last name</label>
+        <div class="ctrl">
+            <div class="error-label" error-element="{'default': 'test22', required: 'is required'}" for-name="last_name"></div>
+            <input type="text"  ng-required="missingFields.last_name == 'required'" name="last_name" ng-model="registration.last_name" placeholder="Last name">
+        </div>
+    </div>
+    <div class="row" ng-if="missingFields.email">
+        <label>Email</label>
+        <div class="ctrl">
+            <div class="error-label" error-element="{'default': 'test22', required: 'is required'}" for-name="email"></div>
+            <input type="email" ng-required="missingFields.email == 'required'" name="email" ng-model="registration.email" placeholder="Email">
+        </div>
+    </div>
+    <div class="row" ng-if="missingFields.phone_number">
+        <label>Phone no</label>
+        <div class="ctrl">
+            <input type="text" ng-required="missingFields.phone_number == 'required'" name="phone_number" ng-model="registration.phone_number" placeholder="Phone">
+        </div>
+    </div>
+    <div class="row">
+        <label><input type="checkbox" name="privacy" ng-model="registration_extra.privacy"> make it public</label>
+    </div>
+    <div class="row">
+        <a class="btn btn-default" ng-class="{disabled: registrationInProgress}" ng-click="registrationInProgress || registerSocialUser()">Register</a>
+    </div>
+</form>
+</div>

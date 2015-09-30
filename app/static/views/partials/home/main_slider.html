@@ -1,0 +1,47 @@
+<div class="main-slider-wrapper">
+    <div class="main-header">
+      <section class="main-slider" add-loading-box>
+        <ul class="slider-container">
+          <li ng-repeat="article in getTopArticles()">
+            <div class="img dyn-fit-image">
+              <img alt="" ng-src="{! article.image !}">
+            </div>
+            <div class="overlay">
+              <div class="description">
+                <h3 class="title">
+                  <a ng-href="{! article.url !}" ng-bind-template="{! article.title !}: {! article.summary !}"></a>
+                </h3>
+                <div class="read-more">
+                  <a ng-href="{! article.url !}">Read more</a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="btn-prev"></div>
+        <div class="btn-next"></div>
+      </section>
+    </div>
+    <section class="the-highlights row">
+      <div class="overlay-border on-pict">
+        <h4 class="label"><span class="mid"><span class="btn-prev"></span><span class="btn-next"></span></span><span class="mid">The Highlights</span></h4>
+        <hr dir="ltr"><hr dir="rtl">
+      </div>
+      <div class="slider has-overlay">
+        <ul class="item-list regular">
+          <li ng-repeat="article in getTopArticles()">
+            <div class="img dyn-fit-image"><img alt="" ng-src="{! article.image !}"></div>
+            <div class="overlay">
+              <div class="hlgh-content">
+                <h5 class="card-label col1">Travel</h5>
+                <div class="description">
+                  <h4><a ng-href="{! article.url !}" ng-bind="article.title"></a></h4>
+                  <p ng-bind="article.summary"></p>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+</div>

@@ -1,0 +1,40 @@
+@mixin border-radius($rd1, $rd2, $rd3, $rd4) {
+  -webkit-border-radius: $rd1 $rd2 $rd3 $rd4;
+     -moz-border-radius: $rd1 $rd2 $rd3 $rd4;
+      -ms-border-radius: $rd1 $rd2 $rd3 $rd4;
+          border-radius: $rd1 $rd2 $rd3 $rd4;
+}
+@mixin border-radius-all($rd) {
+  -webkit-border-radius: $rd;
+     -moz-border-radius: $rd;
+      -ms-border-radius: $rd;
+          border-radius: $rd;
+}
+@mixin transition($p1, $p2, $p3: ease-in-out, $delay: 0s) {
+  transition: $p1 $p2 $p3 $delay;
+  -webkit-transition: $p1 $p2 $p3 $delay;
+  -moz-transition: $p1 $p2 $p3 $delay;
+  -ms-transition: $p1 $p2 $p3 $delay;
+  -o-transition: $p1 $p2 $p3 $delay;
+}
+@mixin transform_rotate($p) {
+  -moz-transform: rotate($p);
+  -webkit-transform: rotate($p);
+  -ms-transform: rotate($p);
+  transform: rotate($p);
+}
+@mixin linear_gradient($pos, $color_start, $color_stop) {
+  background-image: -webkit-linear-gradient($pos, $color_start, $color_stop);
+  background-image: -moz-linear-gradient($pos, $color_start, $color_stop);
+  background-image: -ms-linear-gradient($pos, $color_start, $color_stop);
+  background-image: -o-linear-gradient($pos, $color_start, $color_stop);
+  background-image: linear-gradient($pos, $color_start, $color_stop);
+}
+@mixin opacity($val) {
+opacity: $val;
+}
+@mixin column_count($val) {
+    -webkit-column-count: $val; // Chrome, Safari, Opera
+    -moz-column-count: $val; // Firefox
+    column-count: $val;
+}

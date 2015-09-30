@@ -1,0 +1,40 @@
+<div class="row menu-spacer auth-box">
+  <div class="col col-4_5">
+    <div class="social-buttons">
+      <span class="soc-btn">
+        <a title="login by google+" attach-click-handler="google" onclick="processSocialMedia('google', 'login');"><i class="fa fa-google-plus"></i></a>
+      </span>
+      <span class="soc-btn">
+        <a title="login by twitter" onclick="processSocialMedia('twitter', 'login');"><i class="fa fa-twitter"></i></a>
+      </span>
+      <span class="soc-btn">
+        <a title="login by facebook" onclick="processSocialMedia('facebook', 'fbLogin');"><i class="fa fa-facebook"></i></a>
+      </span>
+    </div>
+    <!-- fb:login-button parse-fb-on-fly scope="public_profile,email" onlogin="processSocialMedia('facebook', 'login');">
+    </fb:login-button -->
+    <div class="login-form" ng-class="{show_errors: loginFormShowErrors}">
+    <br />
+    <h2>Login form</h2>
+    <form method="post" class="form-controls" name="loginform">
+        <div class="sub-row">
+            <label>Email</label>
+            <div class="ctrl">
+                <div class="error-label" error-element="{'default': 'test22', required: 'is required'}" for-name="email"></div>
+                <input type="text" required name="email" ng-model="login.email" placeholder="Email">
+            </div>
+        </div>
+        <div class="sub-row">
+            <label>Password</label>
+            <div class="ctrl">
+                <input type="password" required="required" name="password" ng-model="login.password" placeholder="Password">
+            </div>
+        </div>
+        <div class="sub-row">
+            <a class="btn btn-default" ng-click="appLogin()">Log in</a>
+            Don't have account? <a ui-sref="main.registerpage">Create one!</a>
+        </div>
+    </form>
+    </div>
+  </div>
+</div>

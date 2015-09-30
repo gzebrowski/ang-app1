@@ -1,0 +1,178 @@
+<div id="menu-1-copy" class="box" ng-include="'/static/views/partials/common/menu_1.html'"></div>
+<div class="search-box box">
+    <p class="input">
+        <input type="text" name="q" placeholder="SEARCH THE INDEPENDENT JOURNAL">
+    </p>
+    <span class="ico-btn">
+        <a class="btn"></a>
+    </span>
+</div>
+<div class="sections box">
+  <div class="section i-journals">
+      <div class="content">
+        <ul>
+          <li class="ico ij-gen">
+            <a href="#">
+              <span class="name">Independend Journal</span>
+            </a>
+          </li>
+          <li class="ico ij-faith">
+            <a href="#">
+              <span class="name">Independend Journal <span>Faith</span></span>
+            </a>
+          </li>
+          <li class="ico ij-hero">
+            <a href="#">
+              <span class="name">Independend Journal <span>Hero</span></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+  </div>
+  <div class="section tags">
+      <div class="content">
+        <h5>Tags</h5>
+        <ul>
+          <li><a href="#">Photohraphy</a></li>
+          <li><a href="#">Design</a></li>
+          <li><a href="#">Pop Culture</a></li>
+          <li><a href="#">Video</a></li>
+          <li><a href="#">Graphic</a></li>
+          <li><a href="#">Stories</a></li>
+        </ul>
+      </div>
+  </div>
+  <div class="section about">
+      <div class="content">
+        <h5>About IJ</h5>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Latest Stories</a></li>
+          <li><a href="#">Most Popular</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Advertise</a></li>
+          <li><a href="#">Policies</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+  </div>
+  <div class="section user-ctrl">
+      <div class="content" ng-if="userAuthenticated">
+        <div class="logo-name">
+          <span class="img"><img alt="" ng-src="{! currUser.avatar !}"></span>
+          <h5 class="name" ng-bind="currUser.username"></h5>
+        </div>
+        <ul>
+          <li><a href="#">My Profile</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a ng-click="logout()">Logout</a></li>
+        </ul>
+        <div class="socials">
+          <a href="#" class="fb"><i class="fa fa-facebook"></i> <span>Connect Facebook</span></a>
+          <a href="#" class="tw"><i class="fa fa-twitter"></i> <span>Connect Twitter</span></a>
+        </div>
+      </div>
+      <div class="content" ng-if="!userAuthenticated">
+        <h5 class="name">Log in</h5>
+        <div class="sub-row">
+          <label>Email</label>
+          <div class="ctrl">
+              <div class="error-label" error-element="{'default': 'test22', required: 'is required'}" for-name="email"></div>
+              <input type="text" required name="email" ng-model="login.email" placeholder="Email">
+          </div>
+        </div>
+        <div class="sub-row">
+          <label>Password</label>
+            <div class="ctrl">
+              <input type="password" required="required" name="password" ng-model="login.password" placeholder="Password">
+            </div>
+        </div>
+        <div class="sub-row">
+          <a class="btn btn-default" ng-click="appLogin()">Log in</a>
+        </div>
+        <div class="socials">
+          <a href="#" class="fb"><i class="fa fa-facebook"></i> <span>Log in by Facebook</span></a>
+          <a href="#" class="tw"><i class="fa fa-twitter"></i> <span>Log in by Twitter</span></a>
+        </div>
+      </div>
+
+  </div>
+</div>
+<div class="recently-viewed box">
+  <h5>Recently Viewed</h5>
+  <div class="item-list">
+    <div class="ul-item-list regular">
+      <div class="li-wrapper">
+        <div class="li">
+          <div class="img dyn-fit-image"><img alt="" src="/static/img/slider_1_1.jpg"></div>
+          <div class="overlay">
+            <div class="hlgh-content">
+              <h5 class="card-label col1">Travel</h5>
+              <div class="description">
+                <h4>Hillary Clinton's Solar Power Expansion Plan</h4>
+                <p>Here's How Much It Could Lay on the Taxpayer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="li-wrapper">
+        <div class="li">
+          <div class="img dyn-fit-image"><img alt="" src="/static/img/slider_1_2.jpg"></div>
+          <div class="overlay">
+            <div class="hlgh-content">
+              <h5 class="card-label col1">Travel</h5>
+              <div class="description">
+                <h4>Bernie Endorsed by Apple</h4>
+                <p>It looks like at least one tech giant ovner is feeling the Bern</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="li-wrapper">
+        <div class="li">
+          <div class="img dyn-fit-image"><img alt="" src="/static/img/slider_1_3.jpg"></div>
+          <div class="overlay">
+            <div class="hlgh-content">
+              <h5 class="card-label col1">Travel</h5>
+              <div class="description">
+                <h4>McDonalds Just Annouced New Menu</h4>
+                <p>So say goodbye to the old familiar recipes</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="li-wrapper">
+        <div class="li">
+          <div class="img dyn-fit-image"><img alt="" src="/static/img/slider_1_4.jpg"></div>
+          <div class="overlay">
+            <div class="hlgh-content">
+              <h5 class="card-label col1">Travel</h5>
+              <div class="description">
+                <h4>Marine Asking Ronda Rousey to Be His Date</h4>
+                <p>U.S. Marine Jarrod Haschert is a brave man.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="li-wrapper">
+        <div class="li">
+          <div class="img dyn-fit-image"><img alt="" src="/static/img/slider_1_5.jpg"></div>
+          <div class="overlay">
+            <div class="hlgh-content">
+              <h5 class="card-label col1">Travel</h5>
+              <div class="description">
+                <h4>New Anti-IRS Sign is so Rand Paul</h4>
+                <p>Here's other Merchanidise he Should Get</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

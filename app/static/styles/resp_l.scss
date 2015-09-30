@@ -1,0 +1,9 @@
+$dyn_s_l_full_content_size: 1000px;
+@media (max-width: 1280px) {
+    // GULP_INSERT_AND_PROCESS_BASE_STYLES:L
+
+    .newsletter-signup .controlls input[type=email] {
+        width: calc(100% - 34px);
+    }
+
+}

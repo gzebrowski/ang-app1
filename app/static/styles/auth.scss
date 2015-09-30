@@ -1,0 +1,77 @@
+@mixin clearfix() {
+    clear: both;
+    content: "";
+    display: block;
+}
+#main-container .auth-box {
+    padding-top: 4em;
+    .social-buttons {
+        .soc-btn {
+            font-size: 3em;
+            background-color: #FFF;
+            @include border-radius-all(4em);
+            width: 1.4em;
+            height: 1.4em;
+            display: inline-table;
+            text-align: center;
+            margin-right: 1em;
+            a {
+                color: $color_1;
+                display: table-cell;
+                vertical-align: middle;
+                &:hover {
+                    color: lighten($color_1, 20%);
+                }
+            }
+        }
+    }
+
+    .registration-form, .login-form {
+        
+        max-width: 540px;
+        .sub-row {
+            margin-top: 1em;
+            margin-bottom: 1em;
+            label {
+                float: left;
+                width: 5em;
+                display: block;
+                line-height: 1.7em;
+            }
+            .ctrl {
+                float: left;
+                width: calc(100% - 120px);
+            }
+            &::after {
+                @include clearfix();
+            }
+        }
+        .error-label {
+            display: none;
+        }
+        &.show_errors .error-label {
+            display: block;
+            &.hidden {
+                display: none;
+            }
+        }
+    }
+    .geolocation-prompt, .geolocation-thanks {
+        padding: 10px;
+        margin: 10px;
+        color: #FFF;
+        background-color: #FF0099;
+        border: 1px solid #DDD;
+        @include border-radius-all(5px);
+    }
+    .geolocation-thanks {
+        background-color: #00FF99;
+        @include opacity(1);
+        transition: all 2.0s ease-in-out 0s;
+        &.run-animation {
+            @include opacity(0);
+        }
+    }
+}
+#main-container .auth-box {
+}

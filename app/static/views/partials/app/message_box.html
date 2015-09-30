@@ -1,0 +1,15 @@
+<div class="modal-overlay">
+    <div class="wrapper">
+        <div id="global-message-box" ng-class="[data.extraClass, data.type]" ng-style="myStyle">
+            <h2 ng-bind="data.title"></h2>
+            <ul>
+                <li ng-repeat="message in data.messages">
+                    <span ng-bind="message"></span>
+                </li>
+            </ul>
+            <div class="toolbox">
+                <a ng-click="data.closeMb()"><span ng-bind-template="{! data.closeLabel | default: 'OK' !}"></span></a>
+            </div>
+        </div>
+    </div>
+</div>

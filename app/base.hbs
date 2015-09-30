@@ -1,0 +1,90 @@
+<!doctype html>
+<html data-ng-app="App" data-ng-controller="ApplicationCtrl">
+<head>
+    <title>MGA test page</title>
+    <meta name="Keywords" content="" />
+    <meta name="Description" content="" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+      <!-- bower:css -->
+      <!-- endbower -->
+    <link rel="stylesheet" href="/static/styles/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/styles/main.css" type="text/css" />
+</head>
+<body>
+    <!--[if lt IE 10]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+            your browser</a> to improve your experience.</p>
+    <![endif]-->
+<div id="fb-root"></div>
+<!-- script>
+(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "//platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+ 
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+ 
+  return t;
+}(document, "script", "twitter-wjs"));</script -->
+
+    <div id="full-content" ng-class="[fullContentClass, {'full-menu-mode': fullMenuMode}]" scroll-handler="{threshold: 250, cls: 'floating', dir: 'up'}">
+        <div class="main-ui-view" ui-view></div>
+    </div>
+    
+<!-- NOTE: !!!!!!!!!!!! PLS DO NOT REMOVE OR EDIT ANY HTML COMMENTS !!!!!!!!!!!! -->
+
+<!-- _task_prefix_2_rem2_build:js static/scripts/allscripts.js -->
+<!-- build:js static/tmp/scripts/combined.cmpr.js -->
+<!-- bower:js -->
+<!-- endbower -->
+<!-- script type="text/javascript" src="/bower_components/bxslider/jquery.bxSlider.min.js"></script -->
+<!-- endbuild -->
+
+<!-- build:js static/tmp/scripts/combined.uncompr.js -->
+<script type="text/javascript" src="../app/static/scripts/config.js"></script>
+<script type="text/javascript" src="../app/static/scripts/modules/router/config.js"></script>
+<script type="text/javascript" src="../app/static/scripts/modules/app/controllers.js"></script>
+<script type="text/javascript" src="../app/static/scripts/modules/app/services.js"></script>
+<script type="text/javascript" src="../app/static/scripts/modules/app/directives.js"></script>
+<script type="text/javascript" src="../app/static/scripts/modules/home/controllers.js"></script>
+<script type="text/javascript" src="../app/static/scripts/modules/home/directives.js"></script>
+<script type="text/javascript" src="../app/static/scripts/modules/auth/services.js"></script>
+<script type="text/javascript" src="../app/static/scripts/modules/auth/controllers.js"></script>
+<script type="text/javascript" src="../app/static/scripts/modules/auth/directives.js"></script>
+<script type="text/javascript" src="../app/static/scripts/modules/socialauth/services.js"></script>
+<script type="text/javascript" src="../app/static/scripts/modules/socialauth/directives.js"></script>
+<script type="text/javascript" src="../app/static/scripts/modules/socialauth/facebook_service.js"></script>
+<script type="text/javascript" src="../app/static/scripts/modules/socialauth/google_service.js"></script>
+<script type="text/javascript" src="../app/static/scripts/modules/socialauth/twitter_service.js"></script>
+<script type="text/javascript" src="../app/static/scripts/main_script.js"></script>
+
+
+<!-- endbuild -->
+
+<!-- insert-ang-templates-here -->
+
+<!-- _task_prefix_2_rem2_endbuild -->
+
+<!-- buildremove -->
+<script type="text/javascript" src="/static/scripts/dev_script.js"></script>
+<!-- endbuildremove -->
+<!-- test -->
+
+<init-app></init-app><message-box ng-if="messageIsShowing()" mb-data="messageBoxData"></message-box>
+</body>
+</html>
